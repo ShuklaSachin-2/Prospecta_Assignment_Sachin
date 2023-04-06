@@ -1,0 +1,43 @@
+3) Question: what are the key things you would consider when creating/consuming an API to ensure that it is secure and reliable?
+
+
+Solution:
+--------------
+
+There are many things that should be considered while creating/consuming an API. Some of  them are cam be explained as follows-
+
+1. End points are clear and understandable easily.
+
+2. Request Methods are written exactly and working.
+
+3. Handled any tipe of internal or external exception and returns user understandle message.
+
+4. Validation applied for inputs.
+
+
+Authentication and Authorization: Implementing proper authentication and authorization mechanisms such as OAuth 2.0, JWT, or other authentication protocols can help ensure that only authorized users are able to access the API.
+
+Encryption: Using encryption protocols such as HTTPS can help protect sensitive data being transmitted over the network.
+
+
+
+Testing: Testing the API thoroughly before releasing it to production can help ensure that it is secure and reliable. This includes unit testing, integration testing, and other types of testing as needed.
+
+
+
+
+Solution:
+
+My approach to takle the problem statement-
+
+To tackle the challenge of processing the CSV input and producing CSV output with the results, I would use a combination of string parsing and expression evaluation. Here are the high-level steps that I would follow:
+
+Parse the CSV input file and extract the cell references and expressions.
+For each expression, replace any cell references with their corresponding values and evaluate the expression using a math evaluation library such as JEval or Apache Commons Math.
+Replace the original expression with the evaluated value in the output CSV file.
+As for error checking, I would validate that the input CSV file is well-formed and contains valid expressions and cell references. This would include checking for errors such as:
+
+Syntax errors in expressions, such as mismatched parentheses or invalid operators.
+Circular references, where a cell's value depends on itself directly or indirectly.
+Invalid cell references, such as references to non-existent cells or cells with invalid names.
+To prevent users from breaking the code, I would ensure that the code is well-documented, and provide clear error messages to help users identify and correct any issues that may arise. Additionally, I would limit the types of expressions that can be used in the CSV file to a predefined set of operators and functions, and validate all input to prevent injection attacks or other security vulnerabilities.
