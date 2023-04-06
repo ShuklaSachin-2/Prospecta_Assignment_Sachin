@@ -43,7 +43,7 @@ public class EntryController {
 	    @PostMapping("/Entry")
 	    public Entry saveEntry() {
 	        RestTemplate restTemplate = new RestTemplate();
-	        ResponseEntity<Entry>> response = restTemplate.getForEntity("https://Entry.publicEntrys.org/entries", Entry.class);
+	        ResponseEntity<Entry> response = restTemplate.getForEntity("https://Entry.publicEntrys.org/entries", Entry.class);
 	        
 	        Entry EntryResponse = response.getBody();
 	        Entry Entry = new Entry();
